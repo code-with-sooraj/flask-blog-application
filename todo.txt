@@ -1,0 +1,11 @@
+1) posts table  *****************
+2) posts interface *************
+3) Create posts ***********
+4) Delete posts ***********
+
+tomorrow task
+1) delete user
+2) authentication validation
+3) constraints
+4) dashboard
+5) image in contents
