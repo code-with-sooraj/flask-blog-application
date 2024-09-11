@@ -11,7 +11,7 @@
         <h2 class="text-center mb-4">Delete a Blog Post</h2>
 
         <!-- Form to delete a post by ID -->
-        <form action="{{ url_for('deletepost') }}" method="POST">
+        <form action="{{ url_for('delete_post') }}" method="POST">
             <div class="mb-3">
                 <label for="title" class="form-label">Title</label>
                 <input type="text" class="form-control" id="title" name="title" placeholder="Enter Post title" required>

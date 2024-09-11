@@ -3,41 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog Website</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
-</head>
-<body class="bg-gray-100">
+    <title>Mountain Traveller</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 
-    <header class="bg-blue-600 text-white py-4">
-        <div class="container mx-auto">
-            <h1 class="text-3xl font-bold">Welcome to My Blog</h1>
-            <p class="text-xl">A space to share ideas, stories, and knowledge</p>
+
+</head>
+<body>
+    <header>
+        <div class="container1">
+            <a href="/" class="logo">
+                <img src="/static/img1.ico" alt="Mountain Traveller logo" >
+                <span>Learn-O-Pedia</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="{{ url_for('posts') }}">Blog</a></li>
+                    <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-    <main class="container mx-auto my-8">
-        <section>
-            <h2 class="text-2xl font-semibold mb-4">Latest Blogs</h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                
-                    <div class="bg-white rounded-lg shadow-md p-6">
-                        <h3 class="text-xl font-bold mb-2">Welcome to Blog</h3>
-                        <p class="text-gray-700 mb-4">Share your knowledge to us</p>
-                        <p class="text-sm text-gray-500">Written by Sooraj</p>
-                        <a href="#" class="text-blue-600 hover:underline">Read More</a>
-                    </div>
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Do you like mountains?</h1>
+                <p>We do! Since 10 years we have been traveling all over the world to reach and conquer peaks. Now we want to share our experience with others. Each hike is a new challenge - buying equipment, renting hotels, planning a trip... On our blog, you will find tips on everything related to the mountains and reports on the approaches to individual peaks. Do you want to know more?</p>
+                <div class="buttons">
+                    <button class="btn">Login</button>
+                    <button class="btn">Register</button>
+                </div>
             </div>
-            <div class="flex justify-center mt-8">
-                <a href="{{ url_for('registration') }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-4">Register</a>
-                <a href="{{ url_for('login') }}" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">Login</a>
+            <div class="image">
+                <img src="/static/img3.jpg" alt="Mountain road" width="500px" height="500px">
             </div>
         </section>
     </main>
 
-    <footer class="bg-gray-800 text-white text-center py-4">
-        <p>&copy; 2024 My Blog. All rights reserved.</p>
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Mountain Traveller</p>
+        </div>
     </footer>
 
+    <script src="/static/script.js"></script>
 </body>
 </html>
